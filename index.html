@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iury's Portfolio</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      border-radius: 50%;
+      width: 200px;
+    }
+
+    .burger-menu {
+      display: none;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .burger-line {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      margin: 6px 0;
+    }
+
+    /* Media query for burger menu */
+    @media screen and (max-width: 768px) {
+      .burger-menu {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      nav ul.active {
+        display: block;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to Iury's Portfolio</h1>
+    <p>Front End Developer</p>
+  </header>
+
+  <img src="your_picture.jpg" alt="Iury's Picture">
+
+  <!-- Burger menu -->
+  <div class="burger-menu" onclick="toggleMenu()">
+    <div class="burger-line"></div>
+    <div class="burger-line"></div>
+    <div class="burger-line"></div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>About Me</h2>
+      <p>Insert your bio or description here.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Insert your bio or description here.</p>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <p>Add your projects and descriptions here.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>You can reach me at example@email.com</p>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      var navUl = document.querySelector('nav ul');
+      navUl.classList.toggle('active');
+    }
+  </script>
+
+</body>
+
+</html>
